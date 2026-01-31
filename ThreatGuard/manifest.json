@@ -1,0 +1,14 @@
+{
+  "name": "ThreatGuard",
+  "description": "Scores site risk and warns before loading.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "ThreatGuard"
+  },
+  "permissions": ["tabs", "webRequest", "webRequestBlocking"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "service_worker.js"
+  }
+}

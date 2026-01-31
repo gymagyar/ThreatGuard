@@ -1,0 +1,64 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 520px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.target {
+  font-size: 14px;
+  color: #94a3b8;
+  word-break: break-all;
+}
+
+.message {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.details {
+  margin: 12px 0 20px;
+  font-size: 14px;
+  background: #0f172a;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.continue {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #38bdf8;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue[hidden] {
+  display: none;
+}
