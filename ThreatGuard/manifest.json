@@ -4,11 +4,32 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "action": {
-    "default_title": "ThreatGuard"
+    "default_title": "ThreatGuard",
+    "default_popup": "popup.html"
   },
-  "permissions": ["tabs", "webRequest", "webRequestBlocking"],
-  "host_permissions": ["http://*/*", "https://*/*"],
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "alarms"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*", "https://www.virustotal.com/*"],
   "background": {
     "service_worker": "service_worker.js"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "checking.html",
+        "checking.css",
+        "checking.js",
+        "warning.html",
+        "warning.css",
+        "warning.js"
+      ],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
 }

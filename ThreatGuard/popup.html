@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ThreatGuard Options</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <button class="toggle" id="toggleOptions" type="button" aria-expanded="false">
+        ThreatGuard
+      </button>
+      <section class="dropdown" id="optionsPanel" hidden>
+        <p class="label">Select score source:</p>
+        <label class="option">
+          <input type="radio" name="scoreSource" value="demo" checked />
+          Use Demo Scores
+        </label>
+        <label class="option">
+          <input type="radio" name="scoreSource" value="gti" />
+          Use GTI Scores
+        </label>
+        <div class="input-row">
+          <input
+            class="text-input"
+            id="gtiApiKey"
+            type="password"
+            placeholder="GTI API Key"
+            autocomplete="off"
+          />
+          <button
+            class="eye-toggle"
+            id="toggleGtiKey"
+            type="button"
+            aria-label="Show GTI API Key"
+            title="Show GTI API Key"
+          >
+            <svg class="eye-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 5c-5 0-9.27 3.11-11 7 1.73 3.89 6 7 11 7s9.27-3.11 11-7c-1.73-3.89-6-7-11-7Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class="kpis" aria-label="ThreatGuard metrics">
+        <div class="kpi">
+          <span class="kpi-label">Total URLs cached</span>
+          <span class="kpi-value" id="kpiCached">0</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Daily page loaded</span>
+          <span class="kpi-value" id="kpiDailyLoads">0</span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Avg. GTI Score Calculation</span>
+          <span class="kpi-value" id="kpiGtiAvg">–</span>
+        </div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
