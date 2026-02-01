@@ -1,0 +1,1 @@
+hreatGuard is a lightweight browser extension that protects users from phishing and malicious websites by performing real-time URL risk analysis before a page loads. Using a risk score (0–100), ThreatGuard applies graduated protection: 🚫 Block high-risk sites ⚠️ Warn about suspicious sites ✅ Allow safe sites to load normally 
